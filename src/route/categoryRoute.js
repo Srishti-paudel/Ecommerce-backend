@@ -7,7 +7,7 @@ import {
     seedCategory
 } from "../controller/categoryController.js";
 
-const router = express.Router();
+const router = express.Router({ strict: false });
 
 router.post("/seed", seedCategory);
 router.post("/", addCategory);

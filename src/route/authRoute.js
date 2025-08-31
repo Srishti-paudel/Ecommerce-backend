@@ -1,10 +1,11 @@
 import express from 'express'
 import registerUser, {  loginUser, handlePassword,  resetPassword, verifyOtp } from '../controller/userController.js'
-const router = express.Router()
+const router = express.Router({ strict: false })
 
-router.route("/register").post(registerUser)
-router.route("/login").post(loginUser)
-router.route("/forgot-password").post(handlePassword)
-router.route("/verify-otp").post(verifyOtp)
-router.route("/reset-password").post(resetPassword)
+router.post("/register", registerUser)
+router.post("/login", loginUser)
+router.post("/forgot-password", handlePassword)
+router.post("/verify-otp", verifyOtp)
+router.post("/reset-password", resetPassword)
+
 export default router

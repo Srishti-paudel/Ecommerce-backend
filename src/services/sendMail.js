@@ -11,9 +11,9 @@ export const  sendMail =async (data)=>{
     })
     const mailOptions ={
       from: "Digital DOkkan<customerservice@gmail.com>",
-      to:data.to,
-      Subject:data.subject,
-      text: data.Text
+      to: data.to,
+      subject: data.subject,
+      text: data.text
     }
     try{
     await transporter.sendMail(mailOptions)} catch(error){

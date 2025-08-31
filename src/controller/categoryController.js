@@ -1,4 +1,6 @@
-import Category from "../database/models/categoryModel.js";
+import db from "../database/connection.js";
+
+const Category = db.categories;
 
 // Seed initial categories
 const seedCategory = async () => {

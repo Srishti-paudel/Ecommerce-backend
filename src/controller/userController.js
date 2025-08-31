@@ -1,8 +1,10 @@
 import bcrypt from 'bcrypt';
-import {User} from "../database/models/usermodel.js";
+import db from "../database/connection.js";
 import generateToken from '../services/generateToken.js';
 import generateOtp from '../services/generateOtp.js';
 import { sendMail } from '../services/sendMail.js';
+
+const User = db.users;
 
 // const User = {}
 
